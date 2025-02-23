@@ -57,34 +57,34 @@ public class JetpackJoyride extends JPanel implements ActionListener {
         timer.start();
     }
 
-//    @Override
-//    protected void paintComponent(Graphics g) {
-//        super.paintComponent(g);
-//
-//        // O‘yinchi (Jetpack)
-//        g.setColor(Color.YELLOW);
-//        g.fillOval(playerX, playerY, playerWidth, playerHeight);
-//
-//        // Lazerlari
-//        g.setColor(Color.RED);
-//        for (Rectangle laser : lasers) {
-//            g.fillRect(laser.x, laser.y, laser.width, laser.height);
-//        }
-//
-//        // Score
-//        g.setColor(Color.WHITE);
-//        g.setFont(new Font("Arial", Font.BOLD, 20));
-//        g.drawString("Score: " + score, 650, 50);
-//
-//        // Game Over
-//        if (gameOver) {
-//            g.setColor(Color.RED);
-//            g.setFont(new Font("Arial", Font.BOLD, 30));
-//            g.drawString("GAME OVER!", 300, 200);
-//            g.setFont(new Font("Arial", Font.BOLD, 20));
-//            g.drawString("Press 'R' to Restart", 320, 250);
-//        }
-//    }
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+
+
+        g.setColor(Color.YELLOW);
+        g.fillOval(playerX, playerY, playerWidth, playerHeight);
+
+
+        g.setColor(Color.RED);
+        for (Rectangle laser : lasers) {
+            g.fillRect(laser.x, laser.y, laser.width, laser.height);
+        }
+
+
+        g.setColor(Color.WHITE);
+        g.setFont(new Font("Arial", Font.BOLD, 20));
+        g.drawString("Score: " + score, 650, 50);
+
+
+        if (gameOver) {
+            g.setColor(Color.RED);
+            g.setFont(new Font("Arial", Font.BOLD, 30));
+            g.drawString("GAME OVER!", 300, 200);
+            g.setFont(new Font("Arial", Font.BOLD, 20));
+            g.drawString("Press 'R' to Restart", 320, 250);
+        }
+    }
 //
 //    @Override
 //    public void actionPerformed(ActionEvent e) {
