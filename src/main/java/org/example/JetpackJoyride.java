@@ -85,45 +85,45 @@ public class JetpackJoyride extends JPanel implements ActionListener {
             g.drawString("Press 'R' to Restart", 320, 250);
         }
     }
-//
-//    @Override
-//    public void actionPerformed(ActionEvent e) {
-//        if (flying) {
-//            velocity = lift;
-//        } else {
-//            velocity += gravity;
-//        }
-//
-//        playerY += velocity;
-//        if (playerY > 350) {
-//            playerY = 350;
-//        }
-//        if (playerY < 0) {
-//            playerY = 0;
-//        }
-//
-//        for (int i = 0; i < lasers.size(); i++) {
-//            Rectangle laser = lasers.get(i);
-//            laser.x -= 5;
-//            if (laser.x + laser.width < 0) {
-//                lasers.remove(i);
-//                score++;
-//            }
-//            if (new Rectangle(playerX, playerY, playerWidth, playerHeight).intersects(laser)) {
-//                timer.stop();
-//                gameOver = true;
-//            }
-//        }
-//
-//        if (rand.nextInt(100) < 2 && !gameOver) {
-//            int laserHeight = rand.nextInt(100) + 50;
-//            int laserY = rand.nextInt(300);
-//            lasers.add(new Rectangle(800, laserY, 30, laserHeight));
-//        }
-//
-//        repaint();
-//    }
-//
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (flying) {
+            velocity = lift;
+        } else {
+            velocity += gravity;
+        }
+
+        playerY += velocity;
+        if (playerY > 350) {
+            playerY = 350;
+        }
+        if (playerY < 0) {
+            playerY = 0;
+        }
+
+        for (int i = 0; i < lasers.size(); i++) {
+            Rectangle laser = lasers.get(i);
+            laser.x -= 5;
+            if (laser.x + laser.width < 0) {
+                lasers.remove(i);
+                score++;
+            }
+            if (new Rectangle(playerX, playerY, playerWidth, playerHeight).intersects(laser)) {
+                timer.stop();
+                gameOver = true;
+            }
+        }
+
+        if (rand.nextInt(100) < 2 && !gameOver) {
+            int laserHeight = rand.nextInt(100) + 50;
+            int laserY = rand.nextInt(300);
+            lasers.add(new Rectangle(800, laserY, 30, laserHeight));
+        }
+
+        repaint();
+    }
+
 //    public static void main(String[] args) {
 //        JFrame frame = new JFrame("Jetpack Joyride Game");
 //        JetpackJoyride game = new JetpackJoyride();
