@@ -19,43 +19,43 @@ public class JetpackJoyride extends JPanel implements ActionListener {
     private Random rand = new Random();
     private boolean gameOver = false;
 
-//    public JetpackJoyride() {
-//        setPreferredSize(new Dimension(800, 400));
-//        setBackground(Color.BLACK);
-//        setFocusable(true);
-//        addKeyListener(new KeyAdapter() {
-//            @Override
-//            public void keyPressed(KeyEvent e) {
-//                if (e.getKeyCode() == KeyEvent.VK_SPACE) {
-//                    flying = true;
-//                }
-//                if (e.getKeyCode() == KeyEvent.VK_R && gameOver) {
-//                    resetGame();
-//                }
-//            }
-//
-//            @Override
-//            public void keyReleased(KeyEvent e) {
-//                if (e.getKeyCode() == KeyEvent.VK_SPACE) {
-//                    flying = false;
-//                }
-//            }
-//        });
-//
-//        lasers = new ArrayList<>();
-//        timer = new Timer(20, this);
-//        timer.start();
-//    }
+    public JetpackJoyride() {
+        setPreferredSize(new Dimension(800, 400));
+        setBackground(Color.BLACK);
+        setFocusable(true);
+        addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if (e.getKeyCode() == KeyEvent.VK_SPACE) {
+                    flying = true;
+                }
+                if (e.getKeyCode() == KeyEvent.VK_R && gameOver) {
+                    resetGame();
+                }
+            }
 
-//    private void resetGame() {
-//        playerY = 250;
-//        score = 0;
-//        lasers.clear();
-//        flying = false;
-//        velocity = 0;
-//        gameOver = false;
-//        timer.start();
-//    }
+            @Override
+            public void keyReleased(KeyEvent e) {
+                if (e.getKeyCode() == KeyEvent.VK_SPACE) {
+                    flying = false;
+                }
+            }
+        });
+
+        lasers = new ArrayList<>();
+        timer = new Timer(20, this);
+        timer.start();
+    }
+
+    private void resetGame() {
+        playerY = 250;
+        score = 0;
+        lasers.clear();
+        flying = false;
+        velocity = 0;
+        gameOver = false;
+        timer.start();
+    }
 
 //    @Override
 //    protected void paintComponent(Graphics g) {
