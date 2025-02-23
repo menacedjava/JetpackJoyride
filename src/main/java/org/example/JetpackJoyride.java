@@ -10,14 +10,14 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class JetpackJoyride extends JPanel implements ActionListener {
-//    private int playerX = 50, playerY = 250, playerWidth = 50, playerHeight = 50;
-//    private boolean flying = false;
-//    private int gravity = 2, lift = -15, velocity = 0;
-//    private int score = 0;
-//    private Timer timer;
-//    private ArrayList<Rectangle> lasers;
-//    private Random rand = new Random();
-//    private boolean gameOver = false;
+    private int playerX = 50, playerY = 250, playerWidth = 50, playerHeight = 50;
+    private boolean flying = false;
+    private int gravity = 2, lift = -15, velocity = 0;
+    private int score = 0;
+    private Timer timer;
+    private ArrayList<Rectangle> lasers;
+    private Random rand = new Random();
+    private boolean gameOver = false;
 
 //    public JetpackJoyride() {
 //        setPreferredSize(new Dimension(800, 400));
