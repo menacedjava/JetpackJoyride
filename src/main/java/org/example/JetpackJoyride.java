@@ -124,13 +124,13 @@ public class JetpackJoyride extends JPanel implements ActionListener {
         repaint();
     }
 
-//    public static void main(String[] args) {
-//        JFrame frame = new JFrame("Jetpack Joyride Game");
-//        JetpackJoyride game = new JetpackJoyride();
-//        frame.add(game);
-//        frame.pack();
-//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        frame.setVisible(true);
-//        frame.setLocationRelativeTo(null);
-//    }
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Jetpack Joyride Game");
+        JetpackJoyride game = new JetpackJoyride();
+        frame.add(game);
+        frame.pack();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
+    }
 }
